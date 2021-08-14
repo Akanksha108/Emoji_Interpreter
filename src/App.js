@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emojiImage from "./emojis.jpg";
 import "./styles.css";
 
 // Database
@@ -37,7 +38,12 @@ export default function App() {
       <h1>Inside Outt!!!</h1>
       <input
         type="text"
-        style={{ width: "80%", padding: "0.6rem" }}
+        style={{
+          width: "70%",
+          padding: "0.6rem",
+          height: "4vh",
+          border: "2px solid black"
+        }}
         onChange={emojiInputHandler}
       />
       <h2> Emoji's we know </h2>
@@ -47,7 +53,12 @@ export default function App() {
           return (
             <span
               key={emoji}
-              style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+              style={{
+                fontSize: "3rem",
+                padding: "0.5rem",
+                margin: "10px",
+                cursor: "pointer"
+              }}
               onClick={() => emojiClickHandler(emoji)}
             >
               {emoji}{" "}
@@ -55,6 +66,12 @@ export default function App() {
           );
         })}
       </h2>
+
+      <img
+        src={emojiImage}
+        alt="Emoji"
+        style={{ width: "600px", height: "350px" }}
+      />
     </div>
   );
 }
