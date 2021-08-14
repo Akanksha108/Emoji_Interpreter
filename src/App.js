@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Inside Outt!!!</h1>
+      <h1>Emoji Interpreter!!!</h1>
       <input
         type="text"
         style={{
