@@ -36,6 +36,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Emoji Interpreter!!!</h1>
+      <h2>Enter the emojis here or click on the below emojis</h2>
       <input
         type="text"
         style={{
@@ -70,7 +71,7 @@ export default function App() {
       <img
         src={emojiImage}
         alt="Emoji"
-        style={{ width: "600px", height: "350px" }}
+        style={{ width: "350px", height: "350px" }}
       />
     </div>
   );
