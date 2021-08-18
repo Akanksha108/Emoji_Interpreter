@@ -34,6 +34,8 @@ export default function App() {
 
     if (meaning) {
       setMeaning(meaning);
+    } else if (userInput === "") {
+      setMeaning("");
     } else {
       setMeaning("Error: Emoji Not Found");
     }
@@ -53,7 +55,8 @@ export default function App() {
           width: "70%",
           padding: "0.6rem",
           height: "4vh",
-          border: "2px solid black"
+          border: "2px solid black",
+          fontSize: "1.2rem"
         }}
         onChange={emojiInputHandler}
       />
