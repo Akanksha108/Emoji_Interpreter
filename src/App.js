@@ -9,7 +9,12 @@ const emojiDictionary = {
   "😉": "Winking",
   "💖": "Heart",
   "😠": "Angry",
-  "😫": "Tired"
+  "😫": "Tired",
+  "😴": "Sleepy",
+  "🥵": "Hot Face",
+  "🥶": "Cold Face",
+  "😨": "Fearful",
+  "🥱": "Yawning"
 };
 
 // console.log(Object.keys(emojiDictionary));
@@ -23,9 +28,15 @@ export default function App() {
   function emojiInputHandler(event) {
     // console.log(event.target.value);
     var userInput = event.target.value;
+
     var meaning = emojiDictionary[userInput];
-    // console.log(meaning);
-    setMeaning(meaning);
+    //console.log(meaning);
+
+    if (meaning) {
+      setMeaning(meaning);
+    } else {
+      setMeaning("Error: Emoji Not Found");
+    }
   }
 
   let emojiClickHandler = (emoji) => {
@@ -35,8 +46,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Emoji Interpreter!!!</h1>
-      <h2>Enter the emojis here or click on the below emojis</h2>
+      <h1>Inside Outt!!!</h1>
       <input
         type="text"
         style={{
@@ -71,7 +81,7 @@ export default function App() {
       <img
         src={emojiImage}
         alt="Emoji"
-        style={{ width: "350px", height: "350px" }}
+        style={{ width: "600px", height: "350px" }}
       />
     </div>
   );
