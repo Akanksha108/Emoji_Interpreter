@@ -56,7 +56,7 @@ export default function App() {
           padding: "0.6rem",
           height: "4vh",
           border: "2px solid black",
-          fontSize: "1.2rem"
+          fontSize: "2rem"
         }}
         onChange={emojiInputHandler}
       />
